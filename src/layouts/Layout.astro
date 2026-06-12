@@ -21,7 +21,7 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-[#F8FAFC] font-['Plus_Jakarta_Sans'] text-tramarq-dark overflow-x-hidden antialiased">
+	<body class="bg-[#F8FAFC] font-['Plus_Jakarta_Sans'] text-tramarq-dark overflow-x-hidden antialiased w-full relative">
 		<slot />
 	</body>
 </html>
@@ -30,6 +30,13 @@ const { title } = Astro.props;
 		--tramarq-blue: #007AFF;
 		--tramarq-red: #FF0000;
 		--tramarq-dark: #000000;
+	}
+
+	html, body {
+		width: 100%;
+		overflow-x: hidden;
+		margin: 0;
+		padding: 0;
 	}
 
 	* {

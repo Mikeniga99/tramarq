@@ -32,16 +32,18 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 
 		<!-- Mobile Menu Overlay -->
-		<div id="mobile-menu" class="fixed inset-0 bg-tramarq-dark/95 z-[60] flex flex-col items-center justify-center space-y-8 transition-all duration-500 opacity-0 pointer-events-none translate-x-full">
-			<button id="menu-close" class="absolute top-6 right-6 text-white p-2">
+		<div id="mobile-menu" class="fixed inset-0 bg-tramarq-dark z-[100] flex flex-col items-center justify-center p-6 transition-all duration-500 opacity-0 pointer-events-none translate-x-full">
+			<button id="menu-close" class="absolute top-6 right-6 text-white p-2 hover:bg-white/10 rounded-full transition-colors">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 				</svg>
 			</button>
-			<a href="#accueil" class="mobile-nav-link">Accueil</a>
-			<a href="#services" class="mobile-nav-link">Services</a>
-			<a href="#produits" class="mobile-nav-link">Catalogue</a>
-			<a href="#contact" class="px-10 py-4 bg-tramarq-red text-white rounded-full font-bold text-lg uppercase tracking-widest shadow-lg shadow-tramarq-red/20">Nous contacter</a>
+			<div class="flex flex-col items-center space-y-10">
+				<a href="#accueil" class="mobile-nav-link text-4xl font-black">Accueil</a>
+				<a href="#services" class="mobile-nav-link text-4xl font-black">Services</a>
+				<a href="#produits" class="mobile-nav-link text-4xl font-black">Catalogue</a>
+				<a href="#contact" class="px-10 py-5 bg-tramarq-red text-white rounded-full font-bold text-sm uppercase tracking-widest shadow-2xl shadow-tramarq-red/30">Nous contacter</a>
+			</div>
 		</div>
 	</nav>
 
