@@ -20,15 +20,28 @@ import Layout from '../layouts/Layout.astro';
 					<a href="#produits" class="nav-link text-tramarq-dark font-semibold text-sm uppercase tracking-wider">Catalogue</a>
 					<a href="#contact" class="px-8 py-3 bg-tramarq-dark text-white rounded-full font-bold hover:bg-tramarq-red transition-all duration-500 shadow-xl shadow-black/10 hover:shadow-tramarq-red/30 uppercase text-xs tracking-widest">Nous contacter</a>
 				</div>
-				<!-- Mobile Menu Button (Icon only for now) -->
+				<!-- Mobile Menu Button -->
 				<div class="lg:hidden flex items-center">
-					<button class="text-tramarq-dark">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<button id="menu-toggle" class="text-tramarq-dark focus:outline-none p-2">
+						<svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
 						</svg>
 					</button>
 				</div>
 			</div>
+		</div>
+
+		<!-- Mobile Menu Overlay -->
+		<div id="mobile-menu" class="fixed inset-0 bg-tramarq-dark/95 z-[60] flex flex-col items-center justify-center space-y-8 transition-all duration-500 opacity-0 pointer-events-none translate-x-full">
+			<button id="menu-close" class="absolute top-6 right-6 text-white p-2">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</button>
+			<a href="#accueil" class="mobile-nav-link">Accueil</a>
+			<a href="#services" class="mobile-nav-link">Services</a>
+			<a href="#produits" class="mobile-nav-link">Catalogue</a>
+			<a href="#contact" class="px-10 py-4 bg-tramarq-red text-white rounded-full font-bold text-lg uppercase tracking-widest shadow-lg shadow-tramarq-red/20">Nous contacter</a>
 		</div>
 	</nav>
 
@@ -241,6 +254,29 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		const menuToggle = document.getElementById('menu-toggle');
+		const menuClose = document.getElementById('menu-close');
+		const mobileMenu = document.getElementById('mobile-menu');
+		const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+		function toggleMenu() {
+			mobileMenu.classList.toggle('opacity-0');
+			mobileMenu.classList.toggle('pointer-events-none');
+			mobileMenu.classList.toggle('translate-x-full');
+			document.body.classList.toggle('overflow-hidden');
+		}
+
+		menuToggle.addEventListener('click', toggleMenu);
+		menuClose.addEventListener('click', toggleMenu);
+
+		mobileLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				toggleMenu();
+			});
+		});
+	</script>
 </Layout>
 
 <style>
@@ -277,21 +313,18 @@ import Layout from '../layouts/Layout.astro';
 
 	/* Custom Classes */
 	.nav-link {
-		position: relative;
-		padding-bottom: 4px;
+		@apply relative pb-1;
 	}
 	.nav-link::after {
 		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0;
-		height: 2px;
-		background: #007AFF;
-		transition: width 0.4s ease;
+		@apply absolute bottom-0 left-0 w-0 h-[2px] bg-tramarq-blue transition-all duration-300;
 	}
 	.nav-link:hover::after {
-		width: 100%;
+		@apply w-full;
+	}
+
+	.mobile-nav-link {
+		@apply text-white text-3xl font-black uppercase tracking-tighter hover:text-tramarq-blue transition-colors;
 	}
 
 	.service-card {
