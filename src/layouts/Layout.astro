@@ -1,0 +1,65 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Tramarq Inter Global Services - Excellence et Rigueur dans l'Agroalimentaire" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<!-- Polices Premium -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[#F8FAFC] font-['Plus_Jakarta_Sans'] text-tramarq-dark overflow-x-hidden antialiased">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--tramarq-blue: #007AFF;
+		--tramarq-red: #FF0000;
+		--tramarq-dark: #000000;
+	}
+
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--tramarq-blue) transparent;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	::selection {
+		background: var(--tramarq-blue);
+		color: white;
+	}
+
+	/* Correction pour les polices */
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	/* Smooth Scroll Fix */
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+</style>

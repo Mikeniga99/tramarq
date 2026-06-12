@@ -1,0 +1,300 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tramarq | Excellence & Logistique Globale">
+	<!-- Navbar -->
+	<nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-white/10 bg-white/80 backdrop-blur-xl">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between h-20 lg:h-24 items-center">
+				<div class="flex-shrink-0 flex items-center group cursor-pointer">
+					<img src="/images/logo_sans_fond.PNG" alt="Tramarq Logo" class="h-12 lg:h-16 w-auto transition-transform duration-500 group-hover:rotate-3" />
+					<div class="ml-3 hidden sm:block">
+						<span class="block text-lg lg:text-xl font-bold font-['Montserrat'] leading-none text-tramarq-dark tracking-tighter">TRAMARQ</span>
+						<span class="block text-[8px] lg:text-[10px] uppercase tracking-[0.2em] text-tramarq-blue font-bold">Inter Global Services</span>
+					</div>
+				</div>
+				<div class="hidden lg:flex items-center space-x-10">
+					<a href="#accueil" class="nav-link text-tramarq-dark font-semibold text-sm uppercase tracking-wider">Accueil</a>
+					<a href="#services" class="nav-link text-tramarq-dark font-semibold text-sm uppercase tracking-wider">Services</a>
+					<a href="#produits" class="nav-link text-tramarq-dark font-semibold text-sm uppercase tracking-wider">Catalogue</a>
+					<a href="#contact" class="px-8 py-3 bg-tramarq-dark text-white rounded-full font-bold hover:bg-tramarq-red transition-all duration-500 shadow-xl shadow-black/10 hover:shadow-tramarq-red/30 uppercase text-xs tracking-widest">Nous contacter</a>
+				</div>
+				<!-- Mobile Menu Button (Icon only for now) -->
+				<div class="lg:hidden flex items-center">
+					<button class="text-tramarq-dark">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main class="overflow-x-hidden">
+		<!-- Hero Section -->
+		<section id="accueil" class="relative min-h-[80vh] flex items-center pt-20 lg:pt-0 overflow-hidden bg-[#F8FAFC]">
+			<!-- Background Circles (Properly contained) -->
+			<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[300px] md:w-[600px] lg:w-[800px] aspect-square bg-tramarq-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+			<div class="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[250px] md:w-[500px] lg:w-[600px] aspect-square bg-tramarq-red/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-8 lg:py-12">
+				<div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+					<div class="lg:col-span-7 space-y-6 lg:space-y-8">
+						<div class="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-gray-100 shadow-sm animate-fade-in">
+							<span class="flex h-2 w-2 rounded-full bg-tramarq-red animate-ping"></span>
+							<span class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Expertise Import-Export</span>
+						</div>
+
+						<h1 class="text-4xl sm:text-6xl lg:text-8xl font-['Montserrat'] font-black leading-tight lg:leading-[0.9] tracking-tighter animate-reveal">
+							<span class="text-tramarq-dark block">L'ÉNERGIE</span>
+							<span class="text-tramarq-blue block">DU MOUVEMENT</span>
+							<span class="relative inline-block text-tramarq-dark">
+								GLOBAL.
+								<span class="absolute bottom-1 lg:bottom-2 left-0 w-full h-2 lg:h-3 bg-tramarq-red/20 -z-10"></span>
+							</span>
+						</h1>
+
+						<p class="text-lg lg:text-xl text-gray-500 max-w-xl leading-relaxed animate-fade-in-up">
+							Tramarq transforme la logistique agroalimentaire au Bénin. Une rigueur absolue pour une qualité sans compromis.
+						</p>
+
+						<div class="flex flex-wrap gap-4 pt-4 animate-fade-in-up delay-300">
+							<a href="#services" class="group relative px-8 lg:px-10 py-4 lg:py-5 bg-tramarq-blue text-white rounded-2xl font-bold overflow-hidden shadow-2xl shadow-tramarq-blue/20 transition-all hover:scale-105">
+								<span class="relative z-10">Explorer nos solutions</span>
+								<div class="absolute inset-0 bg-tramarq-dark translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+							</a>
+							<a href="#produits" class="px-8 lg:px-10 py-4 lg:py-5 bg-white border-2 border-gray-100 text-tramarq-dark rounded-2xl font-bold hover:bg-gray-50 transition-all flex items-center space-x-3">
+								<span>Nos produits</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="lg:col-span-5 mt-16 lg:mt-0 relative">
+						<div class="relative animate-float max-w-md mx-auto lg:max-w-none">
+							<div class="absolute inset-0 bg-gradient-to-tr from-tramarq-blue to-transparent opacity-20 blur-2xl rounded-3xl"></div>
+							<img src="/images/logo.PNG" alt="Tramarq Branding" class="relative z-10 w-full rounded-[30px] lg:rounded-[40px] shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700" />
+						</div>
+						<!-- Floating Badge -->
+						<div class="absolute -bottom-6 -left-6 lg:-bottom-10 lg:-left-10 bg-white p-4 lg:p-6 rounded-2xl lg:rounded-3xl shadow-2xl animate-bounce-slow z-20 hidden sm:block border border-gray-50">
+							<p class="text-2xl lg:text-3xl font-black text-tramarq-red">+25</p>
+							<p class="text-[8px] lg:text-[10px] font-bold text-gray-400 uppercase tracking-widest">Conteneurs / Mois</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Marquee Section (Robust Layout) -->
+		<div class="py-6 lg:py-10 bg-tramarq-dark overflow-hidden whitespace-nowrap border-y border-white/10 flex">
+			<div class="flex animate-marquee">
+				<span class="text-3xl lg:text-5xl font-black text-white/10 uppercase mx-8">Importation</span>
+				<span class="text-3xl lg:text-5xl font-black text-tramarq-blue uppercase mx-8">Farine de Blé</span>
+				<span class="text-3xl lg:text-5xl font-black text-white/10 uppercase mx-8">Distribution</span>
+				<span class="text-3xl lg:text-5xl font-black text-tramarq-red uppercase mx-8">Logistique</span>
+				<span class="text-3xl lg:text-5xl font-black text-white/10 uppercase mx-8">Agroalimentaire</span>
+			</div>
+			<div class="flex animate-marquee" aria-hidden="true">
+				<span class="text-3xl lg:text-5xl font-black text-white/10 uppercase mx-8">Importation</span>
+				<span class="text-3xl lg:text-5xl font-black text-tramarq-blue uppercase mx-8">Farine de Blé</span>
+				<span class="text-3xl lg:text-5xl font-black text-white/10 uppercase mx-8">Distribution</span>
+				<span class="text-3xl lg:text-5xl font-black text-tramarq-red uppercase mx-8">Logistique</span>
+				<span class="text-3xl lg:text-5xl font-black text-white/10 uppercase mx-8">Agroalimentaire</span>
+			</div>
+		</div>
+
+		<!-- Services Section -->
+		<section id="services" class="py-20 lg:py-32 bg-white relative">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-20 gap-8">
+					<div class="max-w-2xl">
+						<h2 class="text-tramarq-blue font-bold tracking-[0.3em] uppercase text-sm mb-4">Notre Expertise</h2>
+						<h3 class="text-3xl lg:text-5xl font-black font-['Montserrat'] tracking-tight leading-tight">Des solutions pensées pour la <span class="text-tramarq-red underline decoration-4 underline-offset-8">croissance</span>.</h3>
+					</div>
+					<p class="text-gray-500 max-w-sm">De l'acquisition internationale à la livraison de proximité, nous maîtrisons chaque étape.</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+					<!-- Card 1 -->
+					<div class="service-card group">
+						<div class="absolute top-0 right-0 p-6 lg:p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+							<span class="text-7xl lg:text-9xl font-black">01</span>
+						</div>
+						<div class="relative z-10">
+							<div class="w-14 lg:w-16 h-14 lg:h-16 bg-tramarq-blue/10 text-tramarq-blue rounded-2xl flex items-center justify-center mb-6 lg:mb-8 group-hover:bg-tramarq-blue group-hover:text-white transition-all duration-500">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 lg:h-8 w-6 lg:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+								</svg>
+							</div>
+							<h4 class="text-xl lg:text-2xl font-bold mb-4">Import Global</h4>
+							<p class="text-gray-500 text-sm lg:text-base leading-relaxed">Une chaîne d'approvisionnement mondiale connectée aux meilleurs producteurs, garantissant une disponibilité constante.</p>
+						</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="service-card group border-tramarq-red/20 shadow-xl shadow-tramarq-red/5">
+						<div class="absolute top-0 right-0 p-6 lg:p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+							<span class="text-7xl lg:text-9xl font-black">02</span>
+						</div>
+						<div class="relative z-10">
+							<div class="w-14 lg:w-16 h-14 lg:h-16 bg-tramarq-red/10 text-tramarq-red rounded-2xl flex items-center justify-center mb-6 lg:mb-8 group-hover:bg-tramarq-red group-hover:text-white transition-all duration-500">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 lg:h-8 w-6 lg:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+								</svg>
+							</div>
+							<h4 class="text-xl lg:text-2xl font-bold mb-4">Distribution Flash</h4>
+							<p class="text-gray-500 text-sm lg:text-base leading-relaxed">Une réactivité logistique sans égale pour livrer vos commandes sur l'ensemble du territoire béninois en un temps record.</p>
+						</div>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="service-card group">
+						<div class="absolute top-0 right-0 p-6 lg:p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+							<span class="text-7xl lg:text-9xl font-black">03</span>
+						</div>
+						<div class="relative z-10">
+							<div class="w-14 lg:w-16 h-14 lg:h-16 bg-tramarq-dark/10 text-tramarq-dark rounded-2xl flex items-center justify-center mb-6 lg:mb-8 group-hover:bg-tramarq-dark group-hover:text-white transition-all duration-500">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 lg:h-8 w-6 lg:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+								</svg>
+							</div>
+							<h4 class="text-xl lg:text-2xl font-bold mb-4">Qualité Certifiée</h4>
+							<p class="text-gray-500 text-sm lg:text-base leading-relaxed">Chaque sac de farine, chaque produit importé passe par un contrôle de qualité rigoureux avant d'arriver chez vous.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Catalogue Preview -->
+		<section id="produits" class="py-20 lg:py-32 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex items-center space-x-4 mb-12">
+					<div class="h-px bg-gray-200 flex-grow"></div>
+					<h2 class="text-2xl lg:text-3xl font-black font-['Montserrat']">Notre Catalogue</h2>
+					<div class="h-px bg-gray-200 flex-grow"></div>
+				</div>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+					{['Farine de Blé', 'Pâtes Alimentaires', 'Conserves', 'Produits Laitiers'].map((item) => (
+						<div class="group relative bg-white rounded-3xl p-4 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+							<div class="aspect-square bg-gray-50 rounded-2xl mb-4 overflow-hidden relative">
+								<div class="absolute inset-0 bg-tramarq-blue/80 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">
+									<button class="px-6 py-2 bg-white text-tramarq-dark rounded-full font-bold text-sm">Détails</button>
+								</div>
+								<div class="w-full h-full flex items-center justify-center text-gray-200 font-bold text-4xl italic">T/M</div>
+							</div>
+							<h5 class="text-lg font-bold group-hover:text-tramarq-blue transition-colors">{item}</h5>
+							<p class="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">Certification Import</p>
+						</div>
+					))}
+				</div>
+				<div class="text-center mt-12 lg:mt-16">
+					<button class="px-8 lg:px-12 py-4 lg:py-5 border-2 border-tramarq-dark text-tramarq-dark rounded-2xl font-bold hover:bg-tramarq-dark hover:text-white transition-all text-sm uppercase tracking-widest">Consulter le catalogue complet</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer id="contact" class="bg-white border-t border-gray-100 pt-16 lg:pt-24 pb-8 lg:pb-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid lg:grid-cols-12 gap-12 lg:gap-16 mb-16 lg:mb-20">
+				<div class="lg:col-span-5">
+					<img src="/images/logo_sans_fond.PNG" alt="Tramarq Logo" class="h-12 lg:h-16 w-auto mb-6 lg:mb-8" />
+					<p class="text-gray-400 text-base lg:text-lg max-w-sm mb-10 leading-relaxed">
+						Plus qu'une entreprise de logistique, un partenaire stratégique pour votre sécurité alimentaire au Bénin.
+					</p>
+				</div>
+				<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-10 lg:gap-12">
+					<div>
+						<h6 class="font-bold uppercase text-xs tracking-widest mb-6 lg:mb-8">Navigation</h6>
+						<ul class="space-y-4 text-gray-500 font-medium text-sm">
+							<li><a href="#accueil" class="hover:text-tramarq-blue transition-colors">Accueil</a></li>
+							<li><a href="#services" class="hover:text-tramarq-blue transition-colors">Services</a></li>
+							<li><a href="#produits" class="hover:text-tramarq-blue transition-colors">Catalogue</a></li>
+						</ul>
+					</div>
+					<div>
+						<h6 class="font-bold uppercase text-xs tracking-widest mb-6 lg:mb-8">Contact</h6>
+						<ul class="space-y-4 text-gray-500 font-medium text-sm">
+							<li>Bénin, Afrique de l'Ouest</li>
+							<li>contact@tramarq.com</li>
+						</ul>
+					</div>
+					<div>
+						<h6 class="font-bold uppercase text-xs tracking-widest mb-6 lg:mb-8">Newsletter</h6>
+						<div class="flex">
+							<input type="text" placeholder="Email" class="bg-gray-50 border-none rounded-l-xl px-4 w-full text-xs focus:ring-1 focus:ring-tramarq-blue transition-all" />
+							<button class="bg-tramarq-dark text-white p-3 rounded-r-xl hover:bg-tramarq-blue transition-all">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="border-t border-gray-100 pt-8 lg:pt-12 text-center">
+				<p class="text-[10px] lg:text-sm text-gray-400 font-medium uppercase tracking-widest">© 2024 Tramarq Inter Global Services. Design with Excellence.</p>
+			</div>
+		</div>
+	</footer>
+</Layout>
+
+<style>
+	/* Animations */
+	@keyframes reveal {
+		from { clip-path: inset(0 100% 0 0); opacity: 0; transform: translateX(-20px); }
+		to { clip-path: inset(0 0 0 0); opacity: 1; transform: translateX(0); }
+	}
+	@keyframes fadeInUp {
+		from { opacity: 0; transform: translateY(40px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	@keyframes float {
+		0%, 100% { transform: translateY(0) rotate(3deg); }
+		50% { transform: translateY(-20px) rotate(5deg); }
+	}
+	@keyframes marquee {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(-100%); }
+	}
+	@keyframes bounceSlow {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-15px); }
+	}
+
+	.animate-reveal { animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+	.animate-fade-in-up { opacity: 0; animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
+	.animate-fade-in { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
+	.animate-float { animation: float 6s ease-in-out infinite; }
+	.animate-marquee { animation: marquee 40s linear infinite; }
+	.animate-bounce-slow { animation: bounceSlow 4s ease-in-out infinite; }
+
+	.delay-300 { animation-delay: 0.3s; }
+
+	/* Custom Classes */
+	.nav-link {
+		position: relative;
+		padding-bottom: 4px;
+	}
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: #007AFF;
+		transition: width 0.4s ease;
+	}
+	.nav-link:hover::after {
+		width: 100%;
+	}
+
+	.service-card {
+		@apply relative bg-white p-8 lg:p-12 rounded-[30px] lg:rounded-[40px] border-2 border-gray-50 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-200/50 overflow-hidden cursor-default;
+	}
+</style>
